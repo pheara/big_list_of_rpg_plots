@@ -8,7 +8,7 @@ const beautifyHtml = require('js-beautify').html_beautify;
 
 const directoryPromise = mkdir('./generated');
 
-const tropesPromise = readFile('./big_list_of_rpg_plots.html')
+const tropesPromise = readFile('./index.html')
 .then(fileContent => {
   const $ = cheerio.load(fileContent, {
     normalizeWhitespace: true,
@@ -38,7 +38,7 @@ const filePromises = Promise
     //console.log('Tropes: \n', tropes.map(t => t.title));
     return Promise.all(
       tropes.map((trope, i) =>
-        writeFile(`generated/trope_${i}.html`,
+        writeFile(`generated/2002-01-01-trope-${i}.html`,
           trope.frontmatter + '\n\n' + trope.html)
       )
     );
