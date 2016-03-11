@@ -22,10 +22,15 @@ const tropesPromise = readFile('./fullindex.html')
       indent_size: 2,
       wrap_line_length: 60,
     });
+    const id = title
+      .replace(/\s/g, '_')
+      .replace(/\&apos\;/g, '_')
+      .replace(/[\?,]/g, '');
     return {
       trope: $(tropeTag),
-      frontmatter: frontmatter(title),
+      frontmatter: frontmatter(title, id),
       html: prettyHtml,
+      id: id,
     }
   });
   return tropes;
@@ -38,7 +43,7 @@ const filePromises = Promise
     //console.log('Tropes: \n', tropes.map(t => t.title));
     return Promise.all(
       tropes.map((trope, i) =>
-        writeFile(`generated/2002-01-01-trope-${i}.html`,
+        writeFile(`generated/2002-01-01-${trope.id}.html`,
           trope.frontmatter + '\n\n' + trope.html)
       )
     );
@@ -52,14 +57,10 @@ const filePromises = Promise
 
 filePromises.then(() => console.log('finished writing.'));
 
-
-
-
-
-
-function frontmatter(title) {
+function frontmatter(title, id) {
 return `---
 layout: trope
+fragmentid: ${id}
 title: "${title}"
 date: 2002-01-01 00:00:00 +0000
 categories: tropes

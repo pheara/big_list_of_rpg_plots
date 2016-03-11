@@ -43,7 +43,7 @@ Digest</a> . </em>This ain't Oxford, baby. </p>
 
 <section>
     {% for post in site.posts reversed %}
-      <div class="trope">
+      <div class="trope" id="{{ post.fragmentid }}">
         {{ post.content }}
       </div>
     {% endfor %}
