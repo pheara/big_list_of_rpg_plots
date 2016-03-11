@@ -10,6 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "cheerio": "^0.20.0",
+    "js-beautify": "^1.6.2",
     "mkdirp": "^0.5.1"
   }
 }

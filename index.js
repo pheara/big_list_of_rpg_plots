@@ -1,26 +1,33 @@
 const fs = require('fs');
 const cheerio = require('cheerio');
 const mkdirp = require('mkdirp');
-
-
-
+//const html = require('html');
+const beautifyHtml = require('js-beautify').html_beautify;
 
 
 
 const directoryPromise = mkdir('./generated');
 
-const tropesPromise = readFile('./big_list_of_rpg_plots.html');
+const tropesPromise = readFile('./big_list_of_rpg_plots.html')
 .then(fileContent => {
   const $ = cheerio.load(fileContent, {
-    //normalizeWhitespace: true,
-    normalizeWhitespace: false,
+    normalizeWhitespace: true,
     decodeEntities: true,
   });
   const tropeTags = $('.trope').toArray();
-  const tropes = tropeTags.map(tropeTag => ({
-    html: $(tropeTag).html(),
-    title: $(tropeTag).find('h2').html().trim(),
-  }));
+  const tropes = tropeTags.map(tropeTag => {
+    const title = $(tropeTag).find('h2').html().trim();
+    const html = $(tropeTag).html();
+    const prettyHtml = beautifyHtml(html, {
+      indent_size: 2,
+      wrap_line_length: 60,
+    });
+    return {
+      trope: $(tropeTag),
+      frontmatter: frontmatter(title),
+      html: prettyHtml,
+    }
+  });
   return tropes;
 })
 
@@ -28,9 +35,12 @@ const filePromises = Promise
   .all([directoryPromise, tropesPromise])
   .then( args => {
     const tropes = args[1];
-    console.log('Tropes: \n', tropes.map(t => t.title));
+    //console.log('Tropes: \n', tropes.map(t => t.title));
     return Promise.all(
-      tropes.map((trope, i) => writeFile(`generated/trope_${i}.html`, trope.html))
+      tropes.map((trope, i) =>
+        writeFile(`generated/trope_${i}.html`,
+          trope.frontmatter + '\n\n' + trope.html)
+      )
     );
 
     /* TODO
@@ -47,6 +57,14 @@ filePromises.then(() => console.log('finished writing.'));
 
 
 
+function frontmatter(title) {
+return `---
+layout: trope
+title: "${title}"
+date: 2002-01-01 00:00:00 +0000
+categories: tropes
+---`
+}
 
 function toFileName(someText) {
   // strip non-ascii-characters
