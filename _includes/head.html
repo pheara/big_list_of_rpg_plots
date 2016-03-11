@@ -1,0 +1,49 @@
+<!--
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+</head>
+-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="big_list_of_rpg_plots_files/banner-styles.css">
+
+<!--
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  -->
+
+   <title>{{ page.title }} by {{ page.author }}</title>
+   <meta name="Author" content="{{ page.author }}">
+   <meta name="Description" content="{{ page.description }}">
+   <meta name="KeyWords" content="{{ page.keywords }}">
+   <style type="text/css" media="all">
+    body {
+        font-family: charterregular;
+        color: #1A1A1A;
+
+        max-width: 35em;
+
+        counter-reset: trope-heading;
+    }
+
+    a {
+    }
+
+    .trope h2::before {
+      counter-increment: trope-heading;
+      content: counter(trope-heading) ". "
+    }
+
+
+   </style>
+   <link rel="stylesheet" href="fonts/charter.css" title="charter font includes"/>
+ </head>

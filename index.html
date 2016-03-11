@@ -1,38 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link type="text/css" rel="stylesheet" href="big_list_of_rpg_plots_files/banner-styles.css">
-
-
-   <title>The Big List of RPG Plots, by S. John Ross</title>
-   <meta name="Author" content="S. John Ross">
-   <meta name="Description" content="Every RPG plot ever in the history of the whole world ever: An arbitrary exercise by S. John Ross. No GM can afford not to read this.">
-   <meta name="KeyWords" content="RPG, Adventure, Scenario, Plot, Dungeon, Adventures, Modules, Stories, Roleplaying, Roleplaying Game, GURPS, S. John Ross, Complete, AD&amp;D, Traveller, RuneQuest, Harn, World Of Darkness, Vampire">
-   <meta name="GENERATOR" content="Mozilla/3.04Gold (WinNT; I) [Netscape]">
-   <style type="text/css" media="all">
-    body {
-        font-family: charterregular;
-        color: #1A1A1A;
-
-        max-width: 35em;
-
-        counter-reset: trope-heading;
-    }
-
-    a {
-    }
-
-    .trope h2::before {
-      counter-increment: trope-heading;
-      content: counter(trope-heading) ". "
-    }
-
-
-   </style>
-   <link rel="stylesheet" href="fonts/charter.css" title="charter font includes"/>
-</head>
-<body>
+---
+layout: default
+---
 
 <hgroup id="pagetitle">
   <h1>The Big List of RPG Plots</h1>
@@ -72,6 +40,22 @@ five-act hoozits</a>, plot trees, <a href="https://web.archive.org/web/200710120
 Versus Himself</a> and other Serious Literary Bunkum, try <em><a href="https://web.archive.org/web/20071012023309/http://www.writersdigest.com/">Writer's
 Digest</a> . </em>This ain't Oxford, baby. </p>
 
+<section>
+    {% for trope in site.posts %}
+      <div class="trope">
+        
+        {{ trope.title }}
+
+        <!--
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      -->
+      </div>
+    {% endfor %}
+</section>
 <section>
   <div class="trope">
     <h2>Any Old Port in a Storm</h2>
@@ -754,17 +738,3 @@ pages you might like, and piles of free files for download!</p>
     <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/sandra/home.htm">Sandra</a> |
     <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/bio.htm">S. John</a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
