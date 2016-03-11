@@ -8,7 +8,7 @@ const beautifyHtml = require('js-beautify').html_beautify;
 
 const directoryPromise = mkdir('./generated');
 
-const tropesPromise = readFile('./index.html')
+const tropesPromise = readFile('./fullindex.html')
 .then(fileContent => {
   const $ = cheerio.load(fileContent, {
     normalizeWhitespace: true,

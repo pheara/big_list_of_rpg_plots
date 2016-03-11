@@ -40,11 +40,14 @@ five-act hoozits</a>, plot trees, <a href="https://web.archive.org/web/200710120
 Versus Himself</a> and other Serious Literary Bunkum, try <em><a href="https://web.archive.org/web/20071012023309/http://www.writersdigest.com/">Writer's
 Digest</a> . </em>This ain't Oxford, baby. </p>
 
+site:  {{ site.posts }}
+site:  {{ site.pages }}
+
 <section>
-    {% for trope in site.posts %}
+    {% for post in site.posts %}
       <div class="trope">
-        
-        {{ trope.title }}
+
+        {{ post.title }}
 
         <!--
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
