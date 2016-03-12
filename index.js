@@ -23,7 +23,7 @@ const tropesPromise = readFile(sourceFile)
   });
   const tropeTags = $('.trope').toArray();
   const tropes = tropeTags.map(tropeTag => {
-    const title = $(tropeTag).find('h2').html().trim();
+    const title = $(tropeTag).find('h1').html().trim();
     const html = $(tropeTag).html();
     const prettyHtml = beautifyHtml(html, {
       indent_size: 2,
