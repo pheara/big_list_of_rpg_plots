@@ -1,25 +1,39 @@
 
-    a {
-      text-decoration: none;
-      color: #003BE4;
-    }
+a {
+  text-decoration: none;
+  color: #003BE4;
+}
 
-    body {
-        font-family: charterregular;
-        color: #1A1A1A;
+body {
+  font-family: charterregular;
+  color: #1A1A1A;
+  font-size: 1.1rem;
 
-        max-width: 36rem;
-        font-size: 1.1rem;
+  counter-reset: trope-heading;
 
-        counter-reset: trope-heading;
-    }
+/*
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  */
+}
 
-    p {
-      line-height: 1.4;
-    }
+.maincolumn {
+  max-width: 36rem;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+p {
+  line-height: 1.4;
+}
 
 
-    .trope h1::before {
-      counter-increment: trope-heading;
-      content: counter(trope-heading) ". "
-    }
+.trope h1::before {
+  counter-increment: trope-heading;
+  content: counter(trope-heading) ". "
+}
