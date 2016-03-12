@@ -32,10 +32,10 @@ p {
   line-height: 1.4;
 }
 
-.trope {
+.trope, section {
   margin-top: 2.5rem;
 }
-.trope h1, h2, #tips_and_tricks h1 {
+.trope h1, section h1, h2, #tips_and_tricks h1 {
   font-size: 1.2rem;
 }
 
