@@ -20,6 +20,7 @@ body {
 
 p {
   line-height: 1.4;
+  hyphens: auto;
 }
 
 .trope, section {
