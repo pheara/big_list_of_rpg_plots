@@ -32,6 +32,12 @@ p {
   line-height: 1.4;
 }
 
+.trope {
+  margin-top: 2rem;
+}
+.trope h1 {
+  font-size: 1.2rem;
+}
 
 .trope h1::before {
   counter-increment: trope-heading;
