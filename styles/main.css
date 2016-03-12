@@ -1,0 +1,20 @@
+
+    a {
+      text-decoration: none;
+      color: #00932B;
+    }
+
+    body {
+        font-family: charterregular;
+        color: #1A1A1A;
+
+        max-width: 35em;
+
+        counter-reset: trope-heading;
+    }
+
+
+    .trope h2::before {
+      counter-increment: trope-heading;
+      content: counter(trope-heading) ". "
+    }
