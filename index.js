@@ -6,9 +6,16 @@ const beautifyHtml = require('js-beautify').html_beautify;
 
 
 
-const directoryPromise = mkdir('./generated');
 
-const tropesPromise = readFile('./fullindex.html')
+const sourceFile = './fullindex.html';
+const targetDir = './_posts';
+
+
+
+
+const directoryPromise = mkdir(targetDir);
+
+const tropesPromise = readFile(sourceFile)
 .then(fileContent => {
   const $ = cheerio.load(fileContent, {
     normalizeWhitespace: true,
@@ -42,20 +49,20 @@ const filePromises = Promise
     const tropes = args[1];
     //console.log('Tropes: \n', tropes.map(t => t.title));
     return Promise.all(
-      tropes.map((trope, i) =>
-        writeFile(`generated/2002-01-01-${trope.id}.html`,
-          trope.frontmatter + '\n\n' + trope.html)
-      )
+      tropes.map((trope, i) => {
+        const filePath = `${targetDir}/2002-01-01-${trope.id}.html`;
+        console.log('writing to', filePath);
+        return writeFile(filePath, trope.frontmatter + '\n\n' + trope.html)
+      })
     );
-
-    /* TODO
-    * either normalizeWhitespace plus prettify html
-    * or
-    * strip whitespaces from titles
-    */
-  })
+  });
 
 filePromises.then(() => console.log('finished writing.'));
+
+
+
+
+
 
 function frontmatter(title, id) {
 return `---
