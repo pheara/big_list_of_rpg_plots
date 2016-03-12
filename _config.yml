@@ -21,3 +21,4 @@ keywords: >
 
 # Build settings
 markdown: kramdown
+exclude: [node_modules/, big_list_of_rpg_plots_files/]
