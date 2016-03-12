@@ -1,12 +1,12 @@
 
     a {
       text-decoration: none;
-      color: #00932B;
+      color: #003BE4;
     }
 
     body {
         font-family: charterregular;
-        color: #003BE4;
+        color: #1A1A1A;
 
         max-width: 35em;
 
@@ -14,7 +14,7 @@
     }
 
 
-    .trope h2::before {
+    .trope h1::before {
       counter-increment: trope-heading;
       content: counter(trope-heading) ". "
     }
