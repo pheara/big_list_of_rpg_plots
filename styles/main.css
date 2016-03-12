@@ -33,7 +33,8 @@ p {
 }
 
 .trope, section {
-  margin-top: 2.5rem;
+  /*margin-top: 2.5rem;*/
+  padding-top: 0.4rem; /* has better behaviour on anchors than margin */
 }
 .trope h1, section h1, h2, #tips_and_tricks h1 {
   font-size: 1.2rem;
