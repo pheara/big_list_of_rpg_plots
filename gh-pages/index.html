@@ -1,0 +1,213 @@
+---
+layout: default
+---
+
+<hgroup id="pagetitle">
+  <h1>The Big List of RPG Plots</h1>
+  <h2>A GM's Aid - by John Ross, Version Two</h2>
+</hgroup>
+
+<!-- TODO
+* heading sizes
+* link-colors
+* numbering colors
+-->
+
+What follows is a scrap of trivia . . . my collection
+of <em>RPG plots</em>, in abstract form. I built this by examining
+the premises of hundreds of published adventures for all systems (including
+those systems dear and departed from print), trying to boil them down to
+common denominators. The results are presented here: arbitrary, and sometimes
+redundant. Nevertheless, I turn to this list when I'm stuck for a fresh
+premise for next week's session of my campaign, whatever that campaign
+might happen to be about at the time. It helps me keep from falling into
+thematic ruts (my least favorite kind). With any luck, it might serve a
+similar function for you.
+<p><em>Note: </em>The "plots" are arranged in alphabetical
+order by title. Since the titles are arbitrary, this serves no useful function
+at all. And if you want shakespearean
+five-act hoozits, plot trees, Man
+Versus Himself and other Serious Literary Bunkum, try <em><a href="https://web.archive.org/web/20071012023309/http://www.writersdigest.com/">Writer's
+Digest</a></em>. This ain't Oxford, baby. </p>
+
+
+<ol>
+    {% for post in site.posts reversed %}
+      <li>
+        <a href="#{{ post.fragmentid }}">{{post.title}}</a>
+      </li>
+    {% endfor %}
+</ol>
+
+<p>Extras:</p>
+<ul>
+  <li>
+    <a href="#tips_and_tricks">Tips and Tricks</a>
+  </li>
+  <li>
+    <a href="#about">About the List</a>
+  </li>
+  <li>
+    <a href="#dedications">Dedications</a>
+  </li>
+</ul>
+
+
+<section>
+    {% for post in site.posts reversed %}
+      <div class="trope" id="{{ post.fragmentid }}">
+        {{ post.content }}
+      </div>
+    {% endfor %}
+</section>
+
+
+<section id="tips_and_tricks">
+  <h1>Tips and Tricks </h1>
+
+  <p><em>Surrender yourself to metaphor.
+  </em>I've written the plots in the language of (typically very
+  physical) action-adventure genres, because that's the basic form of roleplaying
+  adventure - but if you're playing on more levels than that, the list can
+  still punch its weight. Just remember that every thing, place, and foe
+  can <em>really </em>be a piece of information, person, and unhealthy attitude,
+  as surely as a space station can be a dungeon and a magical residue can
+  be a fingerprint. </p>
+
+  <p><em>Double up. </em>A
+  nice basic method is the chameleon game, where an adventure presents itself
+  as one type of story in the "hook layer" but reveals itself as
+  something else. Sometimes, the switch is innocent and natural - <em>Don't
+  Eat the Purple Ones</em>, for example, makes a good hook for <em>Running
+  the Gauntlet</em>, and <em>Most Peculiar, Momma </em>is a logical lead for
+  <em>Pandora's Box</em>. Sometimes, the switch is something more sinister
+  or deliberate, with NPCs selling the adventure as one thing when it's really
+  another. This can <em>still </em>be innocent, in its way, if the NPCs have
+  been duped themselves, or if they're just desperate for help and worried
+  that nobody will be eager to tackle the <em>real </em>problem. </p>
+
+  <p><em>Throw yourself a curve. </em>Your
+  players will, anyway, so practice early. Pick two random entries from the
+  Big List and make your adventure on those, no matter what comes up - the
+  first one is the hook layer; the second is the meat of the adventure. If
+  the same entry comes up both times, go with it! Two layers can have a similar
+  structure but very different roots or details. </p>
+
+  <p><em>Double up, part two: </em>Some
+  very satisfying adventures weave two separate (or thematically-related)
+  plots together. An easy way to make this work is to make one plot <em>physical
+  </em>and the other plot <em>personal. </em>That way just one of the plots
+  puts demand on the PCs' location, while the other one can tag along anywhere.
+  For example: the PCs are hired to escort a prince to a summit so he can
+  appear before the masses and end a war (a physical and simple example of
+  Escort Service), but on the way, they realize that the poor guy is <em>suicidal
+  </em>because state obligations have ruined his love life, and must prevent
+  his self-destruction by either fixing the problem or convincing him to
+  shoulder the burden (a personal and metaphorical example of Ounces of Prevention).
+  </p>
+
+  <p><em>Don't Panic. </em>A
+  lot of GMs come to the Big List only once they've <em>begun </em>to panic.
+  Don't crucify yourself just yet! In particular, don't fuss too much over
+  plot, as many GMs do. All of the plots here can provide a tried-and-true,
+  simple <em>structure</em>, and structure is <em>all </em>you need a plot for
+  in a roleplaying game. Remember to play to the <em>strengths of the medium
+  </em>- most all of which are about <em>character</em>, not plot. Only in an
+  RPG can you experience a fictional character on a personal, first-hand
+  level. Outline your adventures to make the most of that. Any plot that
+  contains more than a basic structure is more likely to pull attention <em>away
+  </em>from character, and that's burning the bridge for firewood. All you
+  need to do is be ready to roll with the curves and have fun hamming it
+  up. Relax. Game. </p>
+
+  <p>And finally, here's <em>The Little
+  List of Nearly-Universal Plot Twists That Work With Almost Any Plot Ever:
+  </em>The PCs must work alongside an NPC or organization they'd
+  rather not pal around with (those who are normally rivals or villains,
+  or just a snooty expert sent along to "help" them, etc). The
+  victims are really villains and the villains are really victims. The PCs
+  meet others who can help them, but won't unless the PCs agree to help them
+  with their own causes. The villain is somebody the PCs know personally,
+  even respect or love (or someone they fall for, mid-story). The PCs must
+  succeed without violence, or with special discretion. The PCs must succeed
+  without access to powers, equipment, or other resources they're used to
+  having. The villain is a recurring foil. Another group comparable to the
+  PCs has already failed to succeed, and their bodies/equipment/etc provide
+  clues to help the PCs do better. There are innocents nearby that the PCs
+  must keep safe while dealing with the adventure. The adventure begins suddenly
+  and without warning or buildup; the PCs are tossed into the fire of action
+  in scene one. The PCs must pretend to be someone else, or pretend to be
+  themselves but with very different allegiances, values or tastes. The PCs
+  can't do everything and must choose: which evil to thwart? Which innocents
+  to rescue? Which value or ideal to uphold? The PCs must make a personal
+  sacrifice or others will suffer. The PCs aren't asked to <em>solve </em>the
+  problem, just to render aid against a backdrop of larger trouble: get in
+  a shipment of supplies, sneak out a patient that needs medical help, or
+  so on. One of the PCs is (or is presumed to be) a lost heir, fulfillment
+  of a prophecy, a volcano god, or some other savior and/or patsy, which
+  is why the PCs must do whatever the adventure is about. There is another
+  group of PC-like characters "competing" on the same adventure,
+  possibly with very different goals for the outcome. </p>
+
+</section>
+
+<section id="about">
+  <h1>About the List</h1>
+
+  <p>This revision of the Big List is the result of several
+  additional years of gaming, game writing, and what hopefully amounts to
+  accumulated wisdom. It's also the result of letters from several readers
+  who poked me in the ribs when I had overlooked something important! Any
+  suggestions for expansion to this list should be directed to me via
+  <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/contact.htm">
+  email</a>, and they will be welcomed with open arms and slobbery kisses. You
+  can also download this article in a spiffy Adobe Acrobat file by visiting the
+  <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/downloads.htm#Toys">
+  Offsite Downloads Page</a>. If you've enjoyed this article, wander around
+  <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/blue.htm">
+  the site</a> a little, or visit my electronic game-publishing venture,
+  <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/cumberland.htm">
+  Cumberland Games &amp; Diversions</a>; I've got well over a hundred
+  gaming-related pages you might like, and piles of free files for download!</p>
+</section>
+
+<section id="dedications">
+  <h1>Dedications</h1>
+
+  <p>The<em>Big List of RPG Plots </em>is dedicated to the
+  many, many fans who've let me know how helpful it's been, and especially
+  to those who've helped make it better: Peter Barnard, Glen Barnett, Colin
+  Clark, David Lott, Jason Puckett, Marc Rees, Carrie Schutrick, and Jeff
+  Yaus, plus a few mysterious heroes who never let me know their true identities.
+  This is for all the GMs out there logging the hours to give their players
+  an enjoyable game.</p>
+
+  <p>All contents of this page Copyright ©1999, 2002</p>
+
+  <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/cumberland.htm">cgd</a>
+</section>
+
+<div>
+    <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/fonts.htm">Free Fonts</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/points.htm">Space Gamer? Click Here!</a>
+    <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/fief.htm">Fantasy Gamer? Click Here!</a>
+</div>
+
+
+<div>
+    <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/blue.htm">Home</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/cumberland.htm">Cumberland Games</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/fonts.htm">The Fontworks</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/risus.htm">Risus</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/fly.htm">Fly From Evil </a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/uresia.htm">Uresia: Grave of Heaven</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/gurps.htm">GURPS</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/trek.htm">Star Trek</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/cross.htm">Crossword</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/faq.htm">The FAQ</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www222.pair.com/sjohn/pokethulhu.htm">Pokethulhu</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/bleuroom.htm">Gourmand Bleu</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/library.htm">Secret Library</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/sandra/home.htm">Sandra</a> |
+    <a href="https://web.archive.org/web/20071012023309/http://www.io.com/%7Esjohn/bio.htm">S. John</a>
+</div>

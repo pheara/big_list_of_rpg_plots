@@ -1,0 +1,21 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+     {% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}
+     by
+     {% if page.author %}{{ page.author | escape }}{% else %}{{ site.author | escape }}{% endif %}
+  </title>
+
+  <meta name="Author" content="{{ page.author }}">
+  <meta name="Description" content="{{ page.description }}">
+  <meta name="KeyWords" content="{{ page.keywords }}">
+  <link rel="stylesheet" href="fonts/charter.css" title="charter font includes"/>
+  <!--<link rel="stylesheet" href="styles/main.css" title="main styling"/>-->
+  <link rel="stylesheet" href="css/main.css" title="all the styling">
+  <link rel="stylesheet" href="styles/main.css">
+
+
+</head>

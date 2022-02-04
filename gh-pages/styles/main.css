@@ -1,0 +1,37 @@
+
+a {
+  text-decoration: none;
+  color: #003BE4;
+}
+
+body {
+  font-family: charterregular;
+  color: #1A1A1A;
+  font-size: 1.1rem;
+
+  counter-reset: trope-heading;
+}
+
+.maincolumn {
+  max-width: 37.5rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+p {
+  line-height: 1.4;
+  hyphens: auto;
+}
+
+.trope, section {
+  /*margin-top: 2.5rem;*/
+  padding-top: 0.4rem; /* has better behaviour on anchors than margin */
+}
+.trope h1, section h1, h2, #tips_and_tricks h1 {
+  font-size: 1.2rem;
+}
+
+.trope h1::before {
+  counter-increment: trope-heading;
+  content: counter(trope-heading) ". "
+}
